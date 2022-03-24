@@ -2,11 +2,13 @@ package creationalpatterns.builder;
 
 import creationalpatterns.builder.builders.CastleBuilder;
 import creationalpatterns.builder.builders.StandardBuilder;
+import creationalpatterns.builder.directors.HouseDirector;
 import creationalpatterns.builder.interfaces.HouseBuilder;
 import creationalpatterns.builder.products.House;
 
 public class Main {
     static HouseBuilder builder;
+    static HouseDirector director = new HouseDirector();
 
     public static void setBuilder(HouseBuilder b) {
         builder = b;
@@ -29,6 +31,7 @@ public class Main {
     public static void main(String[] args) {
         House castleHouse;
         House standardHouse;
+        House directorHouse;
 
         clientBuilderChoice("Castle");
         builder.buildWalls(4);
@@ -47,5 +50,8 @@ public class Main {
         builder.buildPool(true);
         standardHouse = builder.getHouse();
         System.out.println(standardHouse);
+
+        directorHouse = director.buildDefaultHouse(builder);
+        System.out.println(directorHouse);
     }
 }
