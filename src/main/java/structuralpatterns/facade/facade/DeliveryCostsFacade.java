@@ -1,9 +1,9 @@
-package structuralpatterns.facade.simpleclasses;
+package structuralpatterns.facade.facade;
 
 import structuralpatterns.facade.complexclasses.DeliveryCostFunctions;
 import structuralpatterns.facade.products.Box;
 
-public class DeliveryCosts {
+public class DeliveryCostsFacade {
     public double getTotalCost(Box box, Double distance) {
         final DeliveryCostFunctions costCalculator = new DeliveryCostFunctions();
         double totalCost;
@@ -12,9 +12,7 @@ public class DeliveryCosts {
         totalCost += costCalculator.weightDeliveryCost(totalCost, box.getWeight());
         totalCost += costCalculator.distantDeliveryCost(totalCost, distance);
         totalCost += costCalculator.sizeDeliveryCost(totalCost, box.getSize());
-        if (box.isFragile()) {
-            totalCost += costCalculator.fragileDeliveryCost(totalCost);
-        }
+        totalCost += costCalculator.fragileDeliveryCost(totalCost, box.isFragile());
 
         return totalCost;
     }

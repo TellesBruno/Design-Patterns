@@ -1,10 +1,10 @@
 package structuralpatterns.facade;
 
 import structuralpatterns.facade.products.Box;
-import structuralpatterns.facade.simpleclasses.DeliveryCosts;
+import structuralpatterns.facade.facade.DeliveryCostsFacade;
 
 public class Main {
-    static final DeliveryCosts deliveryCost = new DeliveryCosts();
+    static final DeliveryCostsFacade deliveryCost = new DeliveryCostsFacade();
     public static void main(String[] args) {
         Box firstBox = new Box("Large", 40.00, false);
         Box secondBox = new Box("Medium", 20.00, true);

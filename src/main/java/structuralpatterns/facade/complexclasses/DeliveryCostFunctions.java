@@ -43,9 +43,13 @@ public class DeliveryCostFunctions {
         return price * sizeBonus;
     }
 
-    public double fragileDeliveryCost(double price) {
+    public double fragileDeliveryCost(double price, boolean fragile) {
         final double FRAGILE_DELIVERY_PRICE = 1.1;
-        return price * FRAGILE_DELIVERY_PRICE;
+        if (fragile) {
+            return price * FRAGILE_DELIVERY_PRICE;
+        } else {
+            return price * 0;
+        }
     }
 
 }
