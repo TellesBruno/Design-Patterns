@@ -1,4 +1,7 @@
-package behavioralpatterns.chainofresponsability;
+package behavioralpatterns.chainofresponsability.handlers;
+
+import behavioralpatterns.chainofresponsability.interfaces.Handler;
+import behavioralpatterns.chainofresponsability.clients.User;
 
 import java.util.Objects;
 

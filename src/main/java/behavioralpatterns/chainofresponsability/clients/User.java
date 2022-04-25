@@ -1,4 +1,4 @@
-package behavioralpatterns.chainofresponsability;
+package behavioralpatterns.chainofresponsability.clients;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

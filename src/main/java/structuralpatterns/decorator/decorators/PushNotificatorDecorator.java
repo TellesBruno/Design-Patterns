@@ -1,4 +1,6 @@
-package structuralpatterns.decorator;
+package structuralpatterns.decorator.decorators;
+
+import structuralpatterns.decorator.clients.User;
 
 public class PushNotificatorDecorator extends BasicNotificatorDecorator {
     public void sendNotification(String message, User user) {

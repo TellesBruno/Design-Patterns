@@ -1,4 +1,4 @@
-package structuralpatterns.decorator;
+package structuralpatterns.decorator.clients;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
